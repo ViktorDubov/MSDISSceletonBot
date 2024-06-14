@@ -1,5 +1,5 @@
 ﻿## Use Case (Диаграмма прецедентов)
-**Use Case (Прецедент использования)** — это описание взаимодействия пользователя (актора) с системой 
+> **Use Case (Прецедент использования)** — это описание взаимодействия пользователя (актора) с системой 
 для достижения определенной цели. Диаграмма прецедентов использования иллюстрирует различные способы,
 с помощью которых пользователи могут использовать систему, отображая их роли и связанные с ними
 функциональные требования. Прецеденты помогают разработчикам понять и задокументировать требования
@@ -24,7 +24,6 @@
 
 ### Диаграмма вариантов использования
 
-![Диаграмма](https://www.plantuml.com/plantuml/uml/VLFBJi905DtFLzomSUL2K61buki7D7v0KqPiGAfjIJJ6X4UY9f3WJbUwu0SgjX51wY_S-qVUQKkXL4apYzuvzvmpvyxKvPa3ZWcMKJrte69OKdSCio7icj6ur2pj0YurlQPLvObpKvUWjhL6jIw5q7J7j227p-ZYXDSdFU0O9pdGR3YMLqrfEz9AK2_KnXyCS8ep75C7VPnIFyGUNKkzoI01i05p-1Dw-Crq2joc3hNGvQQ0Mc7BNkN2Q0WHEuFSeM7hfbM1VTF9mMr8X3_SuzCz2tcyPipH0_nCUqMNiKrRwfhDBFZA4ghDnP7QY-0UApCur3qzs4erlAa3KPVtVUKKVL1cbLKkjlzcoASOXYob70Pyscd2WW7WY7f9O55zpb1Ouy77CL0tIqg3a7Ico6ViwIjAXJy6WGev4gF-OZxenuBROasaupy6E_Z78UzJVoaKwiOAE-iKtF_kmihuXidmbf9yPs177J9MAgQjSKF01_XMA6e1TmRumMiKmqiPEFlWWBt59GupzADJSUxKeiU5V7R-PN4dHF8-O7DpDxnMgvLyfbB8L7WkyySJLpZ7y6t4lyNKNodrLnQ_)
-
-[исходник диаграммы](/Docs/UseCase/UseCase.plantuml)
+![Диаграмма](UseCaseDiagram.png)
+[исходник диаграммы](UseCase.plantuml)
 
