@@ -11,7 +11,7 @@ namespace MainSceletonBot.Tests.SearchSystemTests
     {
       // Arrange
       var mockWorkerSearcher = new Mock<IWorkerSearcher>();
-      var workers = new List<Worker> { new Worker(), new Worker() };
+      var workers = new List<Worker> { new Worker("worker1"), new Worker("worker2") };
 
       mockWorkerSearcher.Setup(searcher => searcher.AllWorkers).Returns(workers);
 
@@ -27,7 +27,7 @@ namespace MainSceletonBot.Tests.SearchSystemTests
     {
       // Arrange
       var mockWorkerSearcher = new Mock<IWorkerSearcher>();
-      var workers = new List<Worker> { new Worker(), new Worker() };
+      var workers = new List<Worker> { new Worker("worker1"), new Worker("worker2") };
       var freeWorkers = workers.Where(worker => !worker.IsBussy).ToList();
 
       mockWorkerSearcher.Setup(searcher => searcher.FreeWorkers).Returns(freeWorkers);

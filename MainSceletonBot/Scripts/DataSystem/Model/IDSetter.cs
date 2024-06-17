@@ -8,7 +8,7 @@
 
     public static void RestoreIDSetter()
     {
-      throw new NotImplementedException();
+      throw new NotImplementedException("Implement after realization IDataBaseProxy");
     }
     public static string GetCustomerID()
     {

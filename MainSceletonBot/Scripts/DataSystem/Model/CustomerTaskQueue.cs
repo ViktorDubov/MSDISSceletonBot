@@ -1,24 +1,39 @@
-﻿namespace MainSceletonBot.Scripts.DataSystem.Model
+﻿using System.Reactive.Subjects;
+
+namespace MainSceletonBot.Scripts.DataSystem.Model
 {
   public class CustomerTaskQueue
   {
     public Queue<CustomerTask> Queue { get; private set; }
 
-    public IObservable<CustomerTask>? QueueObservable { get; private set; }
+    public Subject<CustomerTask> CustomerTaskFlow { get; private set; }
 
     public CustomerTaskQueue() 
     { 
       Queue = new Queue<CustomerTask>();
+      CustomerTaskFlow = new Subject<CustomerTask>();
     }
 
     public void AddCustomerTask(CustomerTask customerTask)
     {
-      throw new NotImplementedException();
+      Queue.Enqueue(customerTask);
+      if(Queue.Count == 1 )
+      { 
+        CustomerTaskFlow.OnNext(Queue.Dequeue());
+      }
     }
 
     public bool RecievePublishNextCustomerTask()
     {
-      throw new NotImplementedException();
+      if(Queue.Count > 0 )
+      {
+        CustomerTaskFlow.OnNext(Queue.Dequeue());
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }
