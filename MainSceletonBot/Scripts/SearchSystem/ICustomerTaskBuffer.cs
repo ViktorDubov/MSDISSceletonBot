@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reactive.Subjects;
 
 namespace MainSceletonBot.Scripts.SearchSystem
 {
   public interface ICustomerTaskBuffer
   {
-    IObservable<bool> CanSearchNewWorker {  get; }//???
+    Subject<bool> CanSearchNewWorker {  get; }//???
     bool IsSearchSystemBussy { get; }//???
 
-    IObservable<CustomerTask> NewCustomerTaskToSearch { get; }
+    Subject<CustomerTask> NewCustomerTaskToSearch { get; }
 
     void RecieveNewSearch();
   }

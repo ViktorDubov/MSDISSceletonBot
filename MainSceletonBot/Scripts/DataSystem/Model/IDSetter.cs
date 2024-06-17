@@ -14,7 +14,7 @@ namespace MainSceletonBot.Scripts.DataSystem.Model
 
     public static void RestoreIDSetter()
     {
-      throw new NotImplementedException();
+      throw new NotImplementedException("Needed realization for IDataBaseProxy");
     }
     public static string GetCustomerID()
     {
