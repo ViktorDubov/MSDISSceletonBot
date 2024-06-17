@@ -1,4 +1,3 @@
-using System.Xml;
 using MainSceletonBot.Scripts.DataSystem.Model;
 
 namespace MainSceletonBot.Tests.DataSystemTests.ModelTests

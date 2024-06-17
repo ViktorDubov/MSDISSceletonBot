@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MainSceletonBot.Scripts.CommandSystem;
-using MainSceletonBot.Scripts.DataSystem.Model;
+﻿using MainSceletonBot.Scripts.CommandSystem;
 using Moq;
 
 namespace MainSceletonBot.Tests.CommandSystemTests

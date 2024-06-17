@@ -1,0 +1,50 @@
+﻿@startuml UseCaseDiagram
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Заказчик" as Requester
+actor "Исполнитель" as Executor
+actor "Администратор" as Admin
+actor "DevOps" as DevOps
+actor "Оператор сопровождения" as SupportOperator
+
+package "Discord Bot" {
+  ' прецеденты заказчика
+  usecase "Отправка задачи" as UC1
+  usecase "Получение статуса задачи" as UC2
+  usecase "Уведомление о выполнении" as UC3
+  usecase "Получение уведомления о не найденном исполнителе" as UC4
+
+  ' прецеденты исполнителя
+  usecase "Получить задачу" as UC5
+
+  ' прецеденты администратора
+  usecase "Управление ботом" as UC6
+  usecase "Просмотр логов" as UC7
+  usecase "Принудительное завершение задачи" as UC8
+  
+  ' прецеденты оператора сопровождения
+  usecase "Мониторинг состояния программы" as UC9
+  usecase "Просмотр списка опросов и их статусов" as UC10
+  usecase "Устранение проблем с зависшими задачами" as UC11
+  usecase "Использование диагностических команд" as UC12
+}
+
+Requester --> UC1
+Requester --> UC2
+Requester --> UC3
+Requester --> UC4
+
+Executor --> UC5
+
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+
+SupportOperator --> UC9
+SupportOperator --> UC10
+SupportOperator --> UC11
+SupportOperator --> UC12
+
+@enduml

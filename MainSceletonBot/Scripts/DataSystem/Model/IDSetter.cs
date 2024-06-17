@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MainSceletonBot.Scripts.DataSystem.Model
+﻿namespace MainSceletonBot.Scripts.DataSystem.Model
 {
   public static class IDSetter//fake, add normal guid in future
   {
