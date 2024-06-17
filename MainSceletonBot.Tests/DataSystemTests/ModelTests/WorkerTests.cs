@@ -8,8 +8,8 @@ namespace MainSceletonBot.Tests.DataSystemTests.ModelTests
     public void Given_few_new_workers_When_initialized_Then_each_has_unique_ID()
     {
         // Act
-        var worker1 = new Worker();
-        var worker2 = new Worker();
+        var worker1 = new Worker("worker1");
+        var worker2 = new Worker("worker2");
 
         // Assert
         Assert.NotEqual(worker1.ID, worker2.ID);
@@ -19,7 +19,7 @@ namespace MainSceletonBot.Tests.DataSystemTests.ModelTests
     public void Given_customer_task_When_set_task_in_work_Then_IsBussy_is_true()
     {
         // Arrange
-        var worker = new Worker();
+        var worker = new Worker("worker");
         var task = new CustomerTask("Test Task");
 
         // Act
@@ -34,7 +34,7 @@ namespace MainSceletonBot.Tests.DataSystemTests.ModelTests
     public void Given_worker_with_task_When_task_finished_Then_IsBussy_is_false()
     {
         // Arrange
-        var worker = new Worker();
+        var worker = new Worker("worker");
         var task = new CustomerTask("Test Task");
         worker.SetTaskInWork(task);
 
@@ -49,7 +49,7 @@ namespace MainSceletonBot.Tests.DataSystemTests.ModelTests
     public void Given_worker_with_task_When_task_finished_Then_TaskInWork_is_null()
     {
         // Arrange
-        var worker = new Worker();
+        var worker = new Worker("worker");
         var task = new CustomerTask("Test Task");
         worker.SetTaskInWork(task);
 

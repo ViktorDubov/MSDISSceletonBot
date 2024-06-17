@@ -11,7 +11,7 @@ namespace MainSceletonBot.Tests.SearchSystemTests
     {
       // Arrange
       var mockBussyWorkerController = new Mock<IBussyWorkerController>();
-      var worker = new Worker();
+      var worker = new Worker("worker");
       var customerTask = new CustomerTask("Test Task");
 
       mockBussyWorkerController.Setup(controller => controller.Workers).Returns(new List<Worker> { worker });
@@ -33,7 +33,7 @@ namespace MainSceletonBot.Tests.SearchSystemTests
     {
       // Arrange
       var mockBussyWorkerController = new Mock<IBussyWorkerController>();
-      var worker = new Worker();
+      var worker = new Worker("worker");
       var customerTask = new CustomerTask("Test Task");
       worker.SetTaskInWork(customerTask);
 

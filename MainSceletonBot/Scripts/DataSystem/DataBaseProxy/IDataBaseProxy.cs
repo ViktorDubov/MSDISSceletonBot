@@ -20,5 +20,12 @@ namespace MainSceletonBot.Scripts.DataSystem.DataBaseProxy
     Task UpdateWorkerAsync(string _ID, Worker _worker, CancellationToken _cancellationToken);
     Task DeleteWorkerAsync(Worker _worker, CancellationToken _cancellationToken);
     
+    Task<uint> GetCustomerIDAsync(CancellationToken _cancellationToken);
+    Task WriteCustomerIDAsync(uint lastID, CancellationToken _cancellationToken);
+
+    Task<uint> GetCustomerTaskIDAsync(CancellationToken _cancellationToken);
+    Task WriteCustomerTaskIDAsync(uint lastID, CancellationToken _cancellationToken);
+    Task<uint> GetWorkerIDAsync(CancellationToken _cancellationToken);
+    Task WriteWorkerIDAsync(uint lastID, CancellationToken _cancellationToken);
   }
 }
