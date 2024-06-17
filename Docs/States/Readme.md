@@ -18,6 +18,6 @@
 
 ### Диаграмма состояний (State Diagram)
 
-![Диаграмма](StatesDiagram.png)
+![Диаграмма](States.drawio.png)
 
-[исходник диаграммы](StatesDiagram.plantuml)
+[исходник диаграммы](States.drawio)
